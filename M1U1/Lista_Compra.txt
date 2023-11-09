@@ -1,2 +1,4 @@
 Galletitas
 gaseosa
+cervezas
+frutas
