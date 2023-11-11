@@ -2,3 +2,5 @@ Galletitas
 gaseosa
 cervezas
 frutas
+verduras
+papasfritas
