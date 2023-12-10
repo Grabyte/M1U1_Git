@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_01_JavaScript</title>
+</head>
+<body>
+    <script>
+        const distancia=parseInt(prompt('Ingrese la distancia entre usted y donde desea ir (El valor sera tratado en mts y debera ser numerico):'));
+        
+		if (distancia <= 1000) {
+            document.write(`A una distancia de ${distancia}mts lo más apropiado sería ir a pie`);
+		} else if (distancia > 1000 && distancia <= 10000) {
+            document.write(`A una distancia de ${distancia}mts lo más apropiado sería viajar en bicicleta`);
+        } else if (distancia > 10000 && distancia <= 30000) {
+            document.write(`A una distancia de ${distancia}mts lo más apropiado sería viajar en colectivo`);
+        } else if (distancia > 30000 && distancia <= 100000) {
+            document.write(`A una distancia de ${distancia}mts lo más apropiado sería viajar en auto`);
+        } else if (distancia > 100000) {
+            document.write(`A una distancia de ${distancia}mts lo más apropiado sería viajar en avión`);
+        }
+        </script>
+</body>
+</html>
