@@ -1,0 +1,25 @@
+.contenedor{
+    display: flex;
+    width: auto;
+}
+
+.caja {
+    border: 1px solid black;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.azul {
+    background-color: blue;
+}

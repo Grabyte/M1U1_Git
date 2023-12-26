@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body id="body"> 
+    <div class="contenedor" id="contenedor">
+        <button class="caja rojo" id="rojo"> <p></p></button>
+        <button class="caja verde" id="verde"></button>
+        <button class="caja azul" id="azul"></button>
+    </div>
+
+    <script>
+
+        const fondoBody = document.getElementById('body');
+        const fondoRojo = document.getElementById('rojo');
+        const fondoVerde = document.getElementById('verde');
+        const fondoAzul = document.getElementById('azul');
+
+        fondoRojo.addEventListener('click', function(){
+            fondoBody.classList.remove('rojo','verde','azul');
+            fondoBody.classList.add('rojo');
+        });
+
+        fondoVerde.addEventListener('click', function(){
+            fondoBody.classList.remove('rojo','verde','azul');
+            fondoBody.classList.add('verde');
+        });
+
+        fondoAzul.addEventListener('click', function(){
+            fondoBody.classList.remove('rojo','verde','azul');
+            fondoBody.classList.add('azul');
+        });
+    </script>
+</body>
+</html>
