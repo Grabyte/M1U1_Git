@@ -2,8 +2,12 @@ h1, h2 {
     font-family: 'Alfa Slab One', cursive;
 }
 
-.footer {    
-    background-color: black;
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: azure;
 }
 
 .hero {
@@ -62,4 +66,17 @@ h1, h2 {
 .testimonio {
     text-align: center;
     padding: 50px 20px;
+}
+
+.staff {
+    background-color: #efefef;
+}
+
+.mapa iframe {
+    width: 100%;
+    aspect-ratio: 1.2;
+}
+
+.scroll_section {
+    scroll-margin-top: 60px;
 }
