@@ -89,3 +89,6 @@ footer {
 .scroll_section {
     scroll-margin-top: 60px;
 }
+.scroll_section_u {
+scroll-padding-top: 60px;
+}
