@@ -28,8 +28,8 @@ app.use('/users', usersRouter);
 
 //Prueba de consultas
  pool.query('select * from empleados').then(function (resultados){
-   console.log(resultados)
- });
+    console.log(resultados)
+  });
 
 //Agregar usuarios a la bd
 // var obj = {
