@@ -9,6 +9,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/', async (req, res, next) => {
 
+
+//Corregir error de que al presionar el boton el formulario se envia varias veces.
   if (!req.body.nombre || !req.body.apellido || !req.body.email || !req.body.telefono || !req.body.mensaje) {
     return res.render('index', {
       error: 'Todos los campos son obligatorios'
