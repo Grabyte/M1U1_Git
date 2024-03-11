@@ -1,0 +1,1 @@
+Para probar el login del admin pueden utilizar el usuario Gabriel, contraseña: 1234
