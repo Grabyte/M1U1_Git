@@ -1,8 +1,8 @@
     <!-- CONTENEDOR PRINCIPAL -->
-    <div class="container-fluid">
+    <div class="container-fluid coloresNaomi no-padding">
 
         <!-- HERO-->
-        <div class="card text-bg-dark text-white" id="home">
+        <div class="card text-bg-dark text-white"id="home">
             <img src="images/header.jpg" class="card-img img-fluid hero" alt="...">
             <div class="card-img-overlay row align-items-center">
                 <div class="col-lg-3 offset-lg-2">
@@ -16,47 +16,28 @@
         </div>
 
         <!-- NOVEDADES Y TESTIMONIOS -->
-        <div class="row my-3 align-items-center">
+        <div class="row my-3 align-items-center p-3">
             <!-- NOVEDADES -->
             <div id="novedades" class="col-md-6 col-lg-5 offset-lg-2 py-2 d-none d-md-block scroll_section">
                 <h2>Los mas morfados!</h2>
                 <ul class="lista-Novedades">
+                    {{#each novedades}}
                     <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/novedades1.jpg"alt="">CBCF</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="{{imagen}}">{{titulo}}</a>
                     </li>
+                    {{/each}}
                     <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img src="images/novedades2.jpg" alt="">B-Vegan</a>
-                    </li>
-                    <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="images/novedades3.jpg" alt=""> Double-CB</a>
-                    </li>
-                    <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal4"><img src="images/novedades4.jpg" alt="">Big-Porky</a>
-                    </li>
-                    <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal5"><img src="images/novedades5.jpg" alt="">The-Tower</a>
-                    </li>
                 </ul>
             </div>
             <!-- CARRUSEL DE HAMBURGESAS -->
-            <div id="hamburguesa" class="col-sm-12 d-md-none carousel slide text-center scroll_section">
+            <div id="hamburguesa" class="col-sm-12 d-md-none p-3 carousel slide text-center scroll_section">
                 <div class="carousel-inner">
                     <h2>Los mas morfados!</h2>
-                    <div class="carousel-item active">
-                        <img src="images/novedadesB1.jpg" class="d-block img-fluid" alt="A1">
+                    {{#each novedades}}
+                    <div class="carousel-item{{#if @first}} active{{/if}}">
+                        <img src="{{imagen}}" class="d-block img-fluid" alt="">
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/novedadesB2.jpg" class="d-block img-fluid" alt="A2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/novedadesB3.jpg" class="d-block img-fluid" alt="A3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/novedadesB4.jpg" class="d-block img-fluid" alt="A4">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/novedadesB5.jpg" class="d-block img-fluid" alt="A5">
-                    </div>
+                    {{/each}}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#hamburguesa" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -68,7 +49,7 @@
                 </button>
             </div>
             <!-- TESTIMONIOS -->
-            <div class="col-lg-3 col-md-6 my-3">
+            <div class="col-lg-3 col-md-6 my-3 p-3">
                 <div class="rounded py-5 testimonios">
                     <h2 class="text-center">Testimonios</h2>
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -99,99 +80,28 @@
         
         <!-- MODAL -->
         <div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            {{#each novedades}}
+            <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Chesse Burger Con Fritas</h2>
+                            <h2 class="modal-title" id="exampleModalLabel">{{subtitulo}}</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="images/novedades1.jpg" class="img-fluid" alt="">
+                            <img src="{{imagen}}" class="img-fluid" alt="">
                         </div>
                         <div class="modal-footer">
-                            <p>Una chesse burger clasica con fritas, simple, sencilla e ideal para morfar.</p>
+                            <p>{{cuerpo}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="modal fade" id="exampleModal2" tabindex="-2" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">B-Vegan</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="images/novedades2.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <p>Una hamburguesa de garbanzos con los mejores condimentos, lechuga, tomates cherry, pepinos, cebolla morada, pan negro y nuestra salsa especial!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="exampleModal3" tabindex="-3" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Double chesse burger con fritas</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="images/novedades3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <p>Una chesse burger doble con fritas, extra queso, lechuga, tomate, más queso y un pan extra crujiente!.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="exampleModal4" tabindex="-4" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Big-Porky with Oingnion</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="images/novedades4.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <p>Una hamburguesa de monstruosa especialidad, tres panes con doble carne, mucha panceta, mucho queso, lechuga, tomate, cebollas moradas y nuestra propia salsa BigMacPorky.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="exampleModal5" tabindex="-5" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">The Tower of power</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="images/novedades5.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <p>La cura para cualquier bajonaso con una buena dosis de pan, carne, queso, carne, queso, carne, queso, carne, queso, carne, queso, carne, queso, lechuga y tomatitos cherry directo en las venas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            {{/each}}
 
         <!-- HISTORIA -->
-        <div id="historia" class="row align-items-center py-4 scroll_section">
+        <div id="historia" class="row align-items-center py-4 scroll_section px-3">
             <div class="col-lg-4 offset-lg-2 d-none d-lg-block">
                 <img src="images/historia1.jpg" alt="historia 1" class="img-fluid">
             </div>  
@@ -209,7 +119,7 @@
         </div>
 
         <!-- NOSOTROS -->
-        <div id="nosotros" class="row align-items-lg-stretch my-3 staff py-4 scroll_section">
+        <div id="nosotros" class="row align-items-lg-stretch my-3 staff py-4 px-3 scroll_section">
             <div class="col-lg-8 offset-lg-2 d-none d-md-block">
                 <div class="row row-cols-1 row-cols-md-4 g-4">
                     <div class="col">
@@ -301,7 +211,7 @@
         </div>
 
         <!-- CONOCENOS + MAPA -->
-        <div id="conocenos" class="row py-4 scroll_section">
+        <div id="conocenos" class="row py-4 px-3 scroll_section">
             <!-- MAPA -->
             <div class="col-md-4 offset-md-2">
                 <h2>Visitanos</h2>
@@ -315,7 +225,7 @@
 
             <div class="col-md-4 mt-4 mt-sm">
                 <h2>Contactanos</h2>
-                <form class="row g-3" action="/" method="post">
+                <form class="row g-3" method="post" id="contact-form">
                     <div class="col-md-6">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre">
@@ -344,5 +254,4 @@
                 <p>{{error}}</p>
             </div>
         </div>
-
     </div>

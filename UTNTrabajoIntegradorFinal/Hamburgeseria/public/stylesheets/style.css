@@ -10,6 +10,17 @@ footer {
     background-color: azure;
 }
 
+.coloresNaomi {
+    background-image: linear-gradient(to bottom, #ff0000, #ff4f00, #ff7500, #ff9300, #ffaf00, #ffb441, #ffb963, #ffc082, #ffc6b7, #ffd7e4, #ffedfd, #ffffff);
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+/* .container-fluid {
+    background-image: linear-gradient(to bottom, #ff0000, #ff4f00, #ff7500, #ff9300, #ffaf00, #ffb441, #ffb963, #ffc082, #ffc6b7, #ffd7e4, #ffedfd, #ffffff);
+} */
 /* Investigar mas sobre como aplicar una opacidad en un background image o en su defecto mandar todo a la corneta y editar la opacidad de la imagen por mi mismo en photoshop */
 /* .p-Background{ */
     /* background: url(../Img/fondoHamburguesa.png) repeat; */
